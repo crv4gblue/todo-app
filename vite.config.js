@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/todo-app/",
+  base: process.env.VERCEL ? "/" : "/todo-app/",
   plugins: [react()],
   test: {
     environment: "jsdom",
